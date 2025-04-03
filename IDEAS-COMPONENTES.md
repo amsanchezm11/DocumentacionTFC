@@ -4,8 +4,14 @@ Este documento contiene las ideas y conceptos que tengo para los componentes pri
 
 ---
 
-## Formulario Login
+## Formulario Login 📝👤
 
 ![Login](IMG/Login%20Modelo.png)
+
+---
+
+## Formulario Registro de nuevo usuario 📝🆕👤
+
+![Registro](IMG/RegistroModelo.png)
 
 ---
