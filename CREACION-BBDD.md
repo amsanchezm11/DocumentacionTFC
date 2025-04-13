@@ -103,3 +103,16 @@ CREATE TABLE `usuarioeventos` (
   FOREIGN KEY (`IdEvento`) REFERENCES `eventos` (`IdEvento`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 ````
+
+
+## 4. Creación de Usuarios
+
+### 4.1. Creación de Usuario ***Administrador***
+
+```sql
+ INSERT INTO usuarios (
+  Nombre, Apellidos, Username, Email, Password, Telefono, FechaNacimiento, Rol, Localidad, Provincia, Avatar
+) VALUES (
+'Alberto', 'Sanchez', 'Admin', 'adminhobby@gmail.com', '202cb962ac59075b964b07152d234b70', '000000000', '1994-03-26', 'Admin', 'Mérida', 'Badajoz', 'admin.png'
+);
+```
