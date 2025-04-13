@@ -24,6 +24,11 @@
 
 ---
 
+> [!IMPORTANT]
+> 1. La aplicaci&oacute;n debe estar creada y compilada por primera vez en NetBeans.
+> 2. Una vez abierta la aplicaci&oacute;n en IntelliJ se debe eliminar el directorio **target**.
+
+---
 > [!CAUTION]
 > Se recomienda que se sigan todos los pasos en el mismo orden en el que se muestra.
 
