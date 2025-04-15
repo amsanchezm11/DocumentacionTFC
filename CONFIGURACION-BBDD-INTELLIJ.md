@@ -4,15 +4,12 @@
 
 ## Índice
 
-- [Paso 1 - Editar Configuraciones](#paso-1)
-- [Paso 2 - Añadir configuración Tomcat Local](#paso-2)
-- [Paso 3 - Configurar nombre, versión y navegador](#paso-3)
-- [Paso 4 - Ajustar nombre del artefacto](#paso-4)
-- [Paso 5 - Configurar acción de actualización](#paso-5)
-- [Paso 6 - Seleccionar JDK](#paso-6)
-- [Paso 7 - Desplegar aplicación](#paso-7)
-- [Paso 8 - Ver tablas y su contenido](#paso-8)
-- [Paso 9 - Verificar despliegue con modificación](#paso-9)
+- [Paso 1 - Crear conexi&oacute;n con MySQL](#paso-1)
+- [Paso 2 - Elecci&oacute;n de la base de datos principal](#paso-2)
+- [Paso 3 - Configuraci&oacute;n de la conexi&oacute;n a la base de datos](#paso-3)
+- [Paso 4 - Comprobaci&oacute;n de la conexi&oacute;n](#paso-4)
+- [Paso 5 - Visualizaci&oacute;n de nuestra base de datos en IntelliJ](#paso-5)
+- [Paso 6 - Ver contenido de las tablas](#paso-6)
 - [Abrir consola SQL en IntelliJ](#abrir-consola)
 - [Ejecutar una consulta SQL](#escribir-sentencia)
 
@@ -36,17 +33,13 @@ El proyecto sobre el que se est&aacute; realizando esta configuraci&oacute;n tie
   
 ![Paso1](IMG/BBDD-INTELLIJ/BBDD-Paso1.png)
 
----
-
-## Paso 2 
-
 - Seleccionamos '+', para crear una nueva conexión.
   
 ![Paso2](IMG/BBDD-INTELLIJ/BBDD-Paso2.png)
 
 ---
 
-## Paso 3 
+## Paso 2 
 
 - Seleccionamos **Data Source**.
 - Elegimos **MySQL**.
@@ -55,7 +48,7 @@ El proyecto sobre el que se est&aacute; realizando esta configuraci&oacute;n tie
 
 ---
 
-## Paso 4 
+## Paso 3 
 
 - Elegimos el tipo de autenticaci&oacute;n. En este caso, **User & password**.
 - Introducimos el **nombre de usuario** de nuestra base de datos.
@@ -69,15 +62,11 @@ El proyecto sobre el que se est&aacute; realizando esta configuraci&oacute;n tie
 
 ---
 
-## Paso 5 
+## Paso 4 
 
 - Probamos si la conexi&oacute;n es satisfactoria haciendo clic en **Test Connection**.
   
 ![Paso5](IMG/BBDD-INTELLIJ/BBDD-Paso5.png)
-
----
-
-## Paso 6
 
 - Si todo est&aacute; correctamente configurado nos aparecer&aacute; el siguente mensaje:
   
@@ -85,7 +74,7 @@ El proyecto sobre el que se est&aacute; realizando esta configuraci&oacute;n tie
 
 ---
 
-## Paso 7
+## Paso 5
 
 - Ya podemos ver nuestra base de datos en el panel de arriba a la derecha.
   
@@ -93,7 +82,7 @@ El proyecto sobre el que se est&aacute; realizando esta configuraci&oacute;n tie
 
 ---
 
-## Paso 8
+## Paso 6
 
 - Si hacemos doble clic sobre una de las tablas se nos mostrar&aacute; su contenido.
   
