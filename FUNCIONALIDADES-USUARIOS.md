@@ -24,21 +24,23 @@ A continuaci&oacute;n se detallan las distintas funcionalidades que tendr&aacute
 
 ## Organizador ⭐⭐
 
-1. **Crear, Modificar, Visualizar** y **Eliminar** eventos de todos los usuarios.
-2. El usuario organizador contar&aacute; con una **insignia** en sus eventos creado a modo de **reconocimiento** a su participaci&oacute;n constante.
-3. Sus eventos aparecer&aacute;n con **mayor prioridad** que los eventos de un usuario ***'Colaborador'***.
-4. Adem&aacute;s de crear eventos comunitarios o privados puede crear eventos competitivos.***(Todav&iacute;a se est&aacute; valorando esta opci&oacute;n)***
-5. Puede **unirse a eventos** de otros usuarios.
-6. **Cancelar su evento** con 12H de antelaci&oacute;n.
-7. **Modificar su perfil** - Datos principales, contrase&ntilde;a, avatar. (No podr&aacute; modificar su dni, su email).
-8. Puede poner un **l&iacute;mite de participantes**.
+1. **Crear, Modificar y Eliminar** sus propios eventos.
+2. **Visualizar** eventos de otros usuarios.
+3. El usuario organizador contar&aacute; con una **insignia** en sus eventos creado a modo de **reconocimiento** a su participaci&oacute;n constante.
+4. Sus eventos aparecer&aacute;n con **mayor prioridad** que los eventos de un usuario ***'Colaborador'***.
+5. Adem&aacute;s de crear eventos comunitarios o privados puede crear eventos competitivos.***(Todav&iacute;a se est&aacute; valorando esta opci&oacute;n)***
+6. Puede **unirse a eventos** de otros usuarios.
+7. **Cancelar su evento** con 12H de antelaci&oacute;n.
+8. **Modificar su perfil** - Datos principales, contrase&ntilde;a, avatar. (No podr&aacute; modificar su dni, su email).
+9. Puede poner un **l&iacute;mite de participantes**.
 
 ---
 
 ## Colaborador ⭐
 
-1. **Crear, Modificar, Visualizar** y **Eliminar** eventos de todos los usuarios.
-2. Puede **unirse a eventos** de otros usuarios.
-3. **Cancelar su evento** con 12H de antelaci&oacute;n.
-4. **Modificar su perfil** - Datos principales, contrase&ntilde;a, avatar. (No podr&aacute; modificar su **dni**, su **email**)
-5. Puede poner un **l&iacute;mite de participantes**.
+1. **Crear, Modificar y Eliminar** sus propios eventos.
+2. **Visualizar** eventos de otros usuarios.
+3. Puede **unirse a eventos** de otros usuarios.
+4. **Cancelar su evento** con 12H de antelaci&oacute;n.
+5. **Modificar su perfil** - Datos principales, contrase&ntilde;a, avatar. (No podr&aacute; modificar su **dni**, su **email**)
+6. Puede poner un **l&iacute;mite de participantes**.
