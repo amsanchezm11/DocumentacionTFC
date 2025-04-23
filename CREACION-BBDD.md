@@ -79,6 +79,7 @@ CREATE TABLE `eventos` (
   `FechaFin` date NOT NULL,
   `Creador` int NOT NULL,
   `Categoria` int NOT NULL,
+  `NumParticipantes` int NOT NULL,
   `Direccion` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Localidad` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Provincia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
@@ -113,6 +114,6 @@ CREATE TABLE `usuarioeventos` (
  INSERT INTO usuarios (
   Nombre, Apellidos, Username, Email, Password, Telefono, FechaNacimiento, Rol, Localidad, Provincia, Avatar
 ) VALUES (
-'Alberto', 'Sanchez', 'Admin', 'adminhobby@gmail.com', '202cb962ac59075b964b07152d234b70', '000000000', '1994-03-26', 'Admin', 'Mérida', 'Badajoz', 'admin.png'
+'Administrador', 'Sanchez', 'Admin', 'adminhobby@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '000000000', '1994-03-26', 'Admin', 'Mérida', 'Badajoz', 'admin.png'
 );
 ```
