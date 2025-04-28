@@ -54,7 +54,7 @@ CREATE TABLE `usuarios` (
   `Password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `Telefono` varchar(9) COLLATE utf8_spanish_ci NOT NULL,
   `FechaNacimiento` date NOT NULL,
-  `Rol` varchar(6) COLLATE utf8_spanish_ci NOT NULL,
+  `Rol` varchar(11) COLLATE utf8_spanish_ci NOT NULL,
   `Localidad` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Provincia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Avatar` varchar(30) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'avatar.png',
@@ -114,6 +114,6 @@ CREATE TABLE `usuarioeventos` (
  INSERT INTO usuarios (
   Nombre, Apellidos, Username, Email, Password, Telefono, FechaNacimiento, Rol, Localidad, Provincia, Avatar
 ) VALUES (
-'Administrador', 'Sanchez', 'Admin', 'adminhobby@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '000000000', '1994-03-26', 'Admin', 'Mérida', 'Badajoz', 'admin.png'
+'Administrador', 'Admin', 'Admin', 'adminhobby@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '000000000', '1994-03-26', 'Admin', 'Mérida', 'Badajoz', 'admin.png'
 );
 ```
