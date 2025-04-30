@@ -22,6 +22,7 @@ La aplicaci&oacute;n deber&aacute; cumplir como m&iacute;nimo las siguientes esp
 Funciones adicionales que realizar&aacute; la aplicaci&oacute;n en caso de disponer del tiempo necesario para implementarlas:
 
 - **Vista de estad&iacute;sticas generales** de la aplicaci&oacute;n con gr&aacute;ficos por parte del usuario Admin.
+- Cuando el usuario haga **Login** se le mostrar&aacute; los eventos filtrados por su provincia ordenados cronol&oacute;gicamente.
 
 ---
 
