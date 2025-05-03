@@ -1,6 +1,7 @@
 # Tablas de la Base de Datos 🛢️
 
-A fecha de ***02 de abril de 2025***, se han definido las siguientes tablas para la base de datos. Estas tablas están actualmente pendientes de revisión por el tutor **Francisco Mera Calderón**.
+> [!NOTE]
+> A fecha de ***03 de mayo de 2025***, se han definido las siguientes tablas para la base de datos. Estas tablas están actualmente pendientes de revisión por el tutor **Francisco Mera Calderón**.
 
 ## Índice
 
@@ -36,20 +37,20 @@ Esta tabla almacena los eventos creados por los usuarios, incluyendo detalles co
 
 | Campo         | Tipo     | Longitud | Restricciones                                                      | Null                |
 |---------------|----------|----------|--------------------------------------------------------------------|---------------------|
-| idEvento      | INT      | 6        | PK AUTOINCREMENTAL                                                 | NOT NULL            |
-| titulo        | VARCHAR  | 40       |                                                                    | NOT NULL            |
-| descripcion   | VARCHAR  | 100      |                                                                    | NOT NULL            |
-| fechaCreacion | DATE     |          |                                                                    | NOT NULL            |
-| fechaInicio   | DATE     |          |                                                                    | NOT NULL            |
-| fechaFin      | DATE     |          |                                                                    | NOT NULL            |
-| idUsuario     | INT      | 6        | FK → usuarios(idUsuario)                                           | NOT NULL            |
-| direccion     | VARCHAR  | 40       |                                                                    | NOT NULL            |
-| localidad     | VARCHAR  | 30       |                                                                    | NOT NULL            |
-| provincia     | VARCHAR  | 30       |                                                                    | NOT NULL            |
-| NumParticipantes | INT      |          |                                                                    | NOT NULL            |
-| idCategoria   | INT      | 6        | FK → categorias(idCategoria)                                       | NOT NULL            |
-| modoEvento    | SET      |          | SET('Comunitario','Competitivo')                                  | DEFAULT 'Comunitario' |
-| estado        | SET      |          | SET('Por Empezar','En Curso','Finalizado','Cancelado')            | DEFAULT 'Por Empezar' |
+| IdEvento      | INT      | 6        | PK AUTOINCREMENTAL                                                 | NOT NULL            |
+| Titulo        | VARCHAR  | 40       |                                                                    | NOT NULL            |
+| Descripcion   | VARCHAR  | 100      |                                                                    | NOT NULL            |
+| FechaCreacion | DATE     |          |                                                                    | NOT NULL            |
+| FechaInicio   | DATE     |          |                                                                    | NOT NULL            |
+| FechaFin      | DATE     |          |                                                                    | NOT NULL            |
+| IdUsuario     | INT      | 6        | FK → usuarios(idUsuario)                                           | NOT NULL            |
+| Direccion     | VARCHAR  | 40       |                                                                    | NOT NULL            |
+| Localidad     | VARCHAR  | 30       |                                                                    | NOT NULL            |
+| Provincia     | VARCHAR  | 30       |                                                                    | NOT NULL            |
+| NumParticipantes | INT   |          |                                                                    | NOT NULL            |
+| IdCategoria   | INT      | 6        | FK → categorias(idCategoria)                                       | NOT NULL            |
+| ModoEvento    | SET      |          | SET('Comunitario','Competitivo')                                  | DEFAULT 'Comunitario' |
+| Estado        | SET      |          | SET('Por Empezar','En Curso','Finalizado','Cancelado')            | DEFAULT 'Por Empezar' |
 
 ---
 
@@ -57,10 +58,23 @@ Esta tabla almacena los eventos creados por los usuarios, incluyendo detalles co
 
 La tabla de categorías se utiliza para organizar los **eventos** en diferentes categorías, como pueden ser videojuegos, juegos de mesa, deportes, música, etc.
 
-| Campo        | Tipo     | Longitud | Restricciones            | Null     |
-|--------------|----------|----------|--------------------------|----------|
-| idCategoria  | INT      | 6        | PK AUTOINCREMENTAL       | NOT NULL |
-| nombre       | VARCHAR  | 30       | UNIQUE                   | NOT NULL |
+| Campo       | Tipo    | Longitud | Restricciones           | Null     |
+| ----------- | ------- | -------- | ----------------------- | -------- |
+| IdCategoria | INT     | 6        | PK AUTOINCREMENTAL      | NOT NULL |
+| Nombre      | VARCHAR | 30       | UNIQUE                  | NOT NULL |
+| Imagen      | VARCHAR | 40       | DEFAULT 'categoria.svg' | NULL     |
+
+---
+
+### Subcategorías 🗂️
+
+La tabla de subcategorías define los subtipos que pertenecen a una categor&iacute;a. Por ejemplo, dentro de Videojuegos, puedes tener subcategor&iacute;as como eSports, Speedrun, Cooperativo, etc.
+
+| Campo          | Tipo    | Longitud | Restricciones                      | Null     |
+| -------------- | ------- | -------- | ---------------------------------- | -------- |
+| IdSubcategoria | INT     | 6        | PK AUTOINCREMENTAL                 | NOT NULL |
+| IdCategoria    | INT     | 6        | FK → Categorías(idCategoria)       | NOT NULL |
+| Nombre         | VARCHAR | 40       | UNIQUE CON idCategoria (compuesto) | NOT NULL |
 
 ---
 
@@ -70,8 +84,8 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 
 | Campo      | Tipo     | Longitud | Restricciones              | Null     |
 |------------|----------|----------|----------------------------|----------|
-| idUsuario  | INT      | 6        | PK, FK → usuarios(idUsuario) | NOT NULL |
-| idEvento   | INT      | 6        | PK, FK → eventos(idEvento)   | NOT NULL |
+| IdUsuario  | INT      | 6        | PK, FK → usuarios(idUsuario) | NOT NULL |
+| IdEvento   | INT      | 6        | PK, FK → eventos(idEvento)   | NOT NULL |
 
 
 ---
@@ -82,6 +96,8 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 - Ahora **Organizador** forma parte de `Rol` en la tabla **Usuarios**.
 - El campo **Nombre** de la tabla **Categor&iacute;s** ha pasado a ser `UNIQUE` para evitar creaciones duplicadas.
 - Se ha a&ntilde;adido un estado m&aacute;s al campo `Estado` de la tabla **Eventos** el nuevo estado es `Cancelado`.
+
+---
 
 **Modificaci&oacute;n** - ***(10/04/2025)***
 1. **Usuarios:**
@@ -103,6 +119,7 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
    - **Definición de claves foráneas**: Se añadieron claves foráneas a los campos `idUsuario` e `idEvento` para hacer referencia a las tablas `usuarios` y `eventos`, respectivamente.
    - **Combinación de claves primarias**: La tabla tiene como clave primaria la combinación de los campos `idUsuario` e `idEvento`.
 
+---
 
 **Modificaci&oacute;n** - ***(23/04/2025)***
 1. **Usuarios:**
@@ -110,3 +127,11 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 
 2. **Eventos:**
    - **Adición de campo `NumParticipantes`**: Se añadió un nuevo campo `NumParticipantes` de tipo `INT`, `NOT NULL`.
+
+---
+
+**Modificaci&oacute;n** - ***(03/05/2025)***
+1. **Categorias:**
+   - Se ha a&ntilde;adido un nuevo campo `Imagen` para guardar el nombre de la imagen correspondiente. Ej: `deportes.png`
+  
+2. Se ha creado una nueva tabla `Subcategorias` para mejorar la experiencia de usuario a la hora de crear eventos.
