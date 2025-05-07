@@ -17,9 +17,9 @@ Este documento recoge todo lo tratado en las distintas reuniones mantenidas con 
 > [!NOTE]
 > ***Aclaraci&oacute;n sobre las preguntas***:<br>
 > - El **apartado** con el icono ❓ hace referencia a las preguntas/dudas que se van a plantear al tutor.
-> - El **apartado** con el icono ✅ hace referencia a las soluciones tratadas con el tutor.
+> - El **apartado** con el icono ✅ hace referencia a las soluciones resueltas con el tutor.
 > - Las **cuestiones** se&ntilde;aladas con el icono 🆕 est&aacute;n pendientes de ser consultadas al tutor.
-> - Las **cuestiones** indicadas con el icono ✔️ han sido resueltas.
+> - Las **cuestiones** indicadas con el icono ✔️ han sido tratadas.
 > - Las **cuestiones** indicadas con el icono ❌ han sido descartadas.
 > - Las **cuestiones** marcadas con el icono 🔁 han quedado pendientes o se ha optado por revisarlas m&aacute;s adelante.
 
@@ -54,6 +54,24 @@ Este documento recoge todo lo tratado en las distintas reuniones mantenidas con 
 ## Reunión 2  
 
 🗓️ **Fecha:** *06/05/2025*
+
+❓ **Preguntas contempladas para la reuni&oacute;n:**
+
+1. Crear una tabla `Provincias` en la base de datos para mayor consistencia de datos y facilidad para aplicar filtros. ✔️
+2. Se ha añadido una tabla nueva llamada `Subcategorias` para la mejora de la experiencia del usuario. ✔️
+3. El formulario de creaci&oacute;n de `Evento` tiene muchos campos, ¿Ser&iacute;a conveniente hacer un formulario multipasos? ✔️
+
+✅ **Resoluci&oacute;n de dudas:**
+
+1. El tutor ha dado visto bueno a la creaci&oacute;n de la nueva tabla `Provincias`. ✅
+2. Se ha revisado la tabla de `Subcategorias`. ✅
+3. Aprobada la idea de crear un formulario multipasos para la creaci&oacute;n de `Eventos`. ✅
+
+---
+
+## Reunión 3  
+
+🗓️ **Fecha:** *13/05/2025*
 
 ❓ **Preguntas contempladas para la reuni&oacute;n:**
 
