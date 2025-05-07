@@ -16,17 +16,17 @@ Esta tabla contiene la información básica de los usuarios registrados en la ap
 
 | Campo           | Tipo     | Longitud | Restricciones                                       | Null               |
 |-----------------|----------|----------|-----------------------------------------------------|--------------------|
-| IdUsuario       | INT      | 6        | PK AUTOINCREMENTAL                                  | NOT NULL           |
+| IdUsuario       | INT      | 11       | PK AUTOINCREMENTAL                                  | NOT NULL           |
 | Nombre          | VARCHAR  | 30       |                                                     | NOT NULL           |
 | Apellidos       | VARCHAR  | 40       |                                                     | NULL               |
 | Username        | VARCHAR  | 20       | UNIQUE                                              | NOT NULL           |
-| Email           | VARCHAR  | 30       | UNIQUE                                              | NOT NULL           |
+| Email           | VARCHAR  | 60       | UNIQUE                                              | NOT NULL           |
 | Password        | VARCHAR  | 100      |                                                     | NOT NULL           |
 | Telefono        | VARCHAR  | 9        | UNIQUE                                              | NOT NULL           |
 | FechaNacimiento | DATE     |          |                                                     | NOT NULL           |
-| Rol             | SET      |          | SET('ADMIN','ORGANIZADOR','COLABORADOR')           | DEFAULT 'COLABORADOR' |
-| Localidad       | VARCHAR  | 30       |                                                     | NOT NULL           |
-| Provincia       | VARCHAR  | 30       |                                                     | NOT NULL           |
+| Rol             | VARCHAR  | 11       |                                                     | DEFAULT 'COLABORADOR' |
+| Localidad       | VARCHAR  | 50       |                                                     | NOT NULL           |
+| Provincia       | VARCHAR  | 50       |                                                     | NOT NULL           |
 | Avatar          | VARCHAR  | 30       |                                                     | DEFAULT 'avatar.png' |
 
 ---
@@ -37,20 +37,20 @@ Esta tabla almacena los eventos creados por los usuarios, incluyendo detalles co
 
 | Campo         | Tipo     | Longitud | Restricciones                                                      | Null                |
 |---------------|----------|----------|--------------------------------------------------------------------|---------------------|
-| IdEvento      | INT      | 6        | PK AUTOINCREMENTAL                                                 | NOT NULL            |
+| IdEvento      | INT      |          | PK AUTOINCREMENTAL                                                 | NOT NULL            |
 | Titulo        | VARCHAR  | 40       |                                                                    | NOT NULL            |
-| Descripcion   | VARCHAR  | 100      |                                                                    | NOT NULL            |
+| Descripcion   | VARCHAR  | 255      |                                                                    | NOT NULL            |
 | FechaCreacion | DATE     |          |                                                                    | NOT NULL            |
 | FechaInicio   | DATE     |          |                                                                    | NOT NULL            |
 | FechaFin      | DATE     |          |                                                                    | NOT NULL            |
-| IdUsuario     | INT      | 6        | FK → usuarios(idUsuario)                                           | NOT NULL            |
-| Direccion     | VARCHAR  | 40       |                                                                    | NOT NULL            |
-| Localidad     | VARCHAR  | 30       |                                                                    | NOT NULL            |
-| Provincia     | VARCHAR  | 30       |                                                                    | NOT NULL            |
+| IdUsuario     | INT      | 11       | FK → usuarios(idUsuario)                                           | NOT NULL            |
+| Direccion     | VARCHAR  | 50       |                                                                    | NOT NULL            |
+| Localidad     | VARCHAR  | 50       |                                                                    | NOT NULL            |
+| Provincia     | VARCHAR  | 50       |                                                                    | NOT NULL            |
 | NumParticipantes | INT   |          |                                                                    | NOT NULL            |
 | IdCategoria   | INT      | 6        | FK → categorias(idCategoria)                                       | NOT NULL            |
-| ModoEvento    | SET      |          | SET('Comunitario','Competitivo')                                  | DEFAULT 'Comunitario' |
-| Estado        | SET      |          | SET('Por Empezar','En Curso','Finalizado','Cancelado')            | DEFAULT 'Por Empezar' |
+| ModoEvento    | VARCHAR  | 11       |                                                                    | DEFAULT 'Comunitario' |
+| Estado        | VARCHAR  | 11       |                                                                    | DEFAULT 'Por Empezar' |
 
 ---
 
@@ -60,8 +60,8 @@ La tabla de categorías se utiliza para organizar los **eventos** en diferentes 
 
 | Campo       | Tipo    | Longitud | Restricciones           | Null     |
 | ----------- | ------- | -------- | ----------------------- | -------- |
-| IdCategoria | INT     | 6        | PK AUTOINCREMENTAL      | NOT NULL |
-| Nombre      | VARCHAR | 30       | UNIQUE                  | NOT NULL |
+| IdCategoria | INT     |          | PK AUTOINCREMENTAL      | NOT NULL |
+| Nombre      | VARCHAR | 40       | UNIQUE                  | NOT NULL |
 | Imagen      | VARCHAR | 40       | DEFAULT 'categoria.svg' | NULL     |
 
 ---
@@ -72,8 +72,8 @@ La tabla de subcategorías define los subtipos que pertenecen a una categor&iacu
 
 | Campo          | Tipo    | Longitud | Restricciones                      | Null     |
 | -------------- | ------- | -------- | ---------------------------------- | -------- |
-| IdSubcategoria | INT     | 6        | PK AUTOINCREMENTAL                 | NOT NULL |
-| IdCategoria    | INT     | 6        | FK → Categorías(idCategoria)       | NOT NULL |
+| IdSubcategoria | INT     |          | PK AUTOINCREMENTAL                 | NOT NULL |
+| IdCategoria    | INT     |          | FK → Categorías(idCategoria)       | NOT NULL |
 | Nombre         | VARCHAR | 40       | UNIQUE CON idCategoria (compuesto) | NOT NULL |
 
 ---
@@ -84,18 +84,18 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 
 | Campo      | Tipo     | Longitud | Restricciones              | Null     |
 |------------|----------|----------|----------------------------|----------|
-| IdUsuario  | INT      | 6        | PK, FK → usuarios(idUsuario) | NOT NULL |
-| IdEvento   | INT      | 6        | PK, FK → eventos(idEvento)   | NOT NULL |
+| IdUsuario  | INT      | 11        | PK, FK → usuarios(idUsuario) | NOT NULL |
+| IdEvento   | INT      |           | PK, FK → eventos(idEvento)   | NOT NULL |
 
 
 ---
 ## Modificaciones
 
 **Modificaci&oacute;n** - ***(07/04/2025)***
-- Se ha eliminado el campo **Organizador** de la tabla **Usuarios**.
-- Ahora **Organizador** forma parte de `Rol` en la tabla **Usuarios**.
-- El campo **Nombre** de la tabla **Categor&iacute;s** ha pasado a ser `UNIQUE` para evitar creaciones duplicadas.
-- Se ha a&ntilde;adido un estado m&aacute;s al campo `Estado` de la tabla **Eventos** el nuevo estado es `Cancelado`.
+1. Se ha eliminado el campo **Organizador** de la tabla **Usuarios**.
+2. Ahora **Organizador** forma parte de `Rol` en la tabla **Usuarios**.
+3. El campo **Nombre** de la tabla **Categor&iacute;s** ha pasado a ser `UNIQUE` para evitar creaciones duplicadas.
+4. Se ha a&ntilde;adido un estado m&aacute;s al campo `Estado` de la tabla **Eventos** el nuevo estado es `Cancelado`.
 
 ---
 
@@ -135,3 +135,8 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
    - Se ha a&ntilde;adido un nuevo campo `Imagen` para guardar el nombre de la imagen correspondiente. Ej: `deportes.png`
   
 2. Se ha creado una nueva tabla `Subcategorias` para mejorar la experiencia de usuario a la hora de crear eventos.
+
+---
+
+**Modificaci&oacute;n** - ***(07/05/2025)***
+1. Se ha actualizado los campos de las tablas.
