@@ -25,6 +25,7 @@ Esta tabla contiene la información básica de los usuarios registrados en la ap
 | Telefono        | VARCHAR  | 9        | UNIQUE                                              | NOT NULL           |
 | FechaNacimiento | DATE     |          |                                                     | NOT NULL           |
 | Rol             | VARCHAR  | 11       |                                                     | DEFAULT 'COLABORADOR' |
+| Sexo            | VARCHAR  | 6        |                                                     | NOT NULL           |
 | Localidad       | VARCHAR  | 50       |                                                     | NOT NULL           |
 | Provincia       | VARCHAR  | 50       |                                                     | NOT NULL           |
 | Avatar          | VARCHAR  | 30       |                                                     | DEFAULT 'avatar.png' |
@@ -140,3 +141,9 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 
 **Modificaci&oacute;n** - ***(07/05/2025)***
 1. Se ha actualizado los campos de las tablas.
+
+---
+
+**Modificaci&oacute;n** - ***(11/05/2025)***
+1. Se ha a&ntilde;adido un nuevo campo en la tabla `Usuarios`.
+2. El campo nuevo es `Sexo` y servir&aacute; para controlar la estad&iacute;stica de **Usuarios por Sexo**.
