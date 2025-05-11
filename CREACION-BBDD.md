@@ -75,6 +75,7 @@ CREATE TABLE `usuarios` (
   `Telefono` varchar(9) COLLATE utf8_spanish_ci NOT NULL,
   `FechaNacimiento` date NOT NULL,
   `Rol` varchar(11) COLLATE utf8_spanish_ci NOT NULL,
+  `Sexo` varchar(6) COLLATE utf8_spanish_ci NOT NULL,
   `Localidad` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Provincia` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
   `Avatar` varchar(30) COLLATE utf8_spanish_ci NOT NULL DEFAULT 'avatar.svg',
@@ -152,7 +153,10 @@ INSERT INTO categorias (Nombre, Imagen) VALUES
 ('Naturaleza y Bienestar', 'naturalezaybienestar.png'),
 ('Conocimiento y Desarrollo Personal', 'conocimientoydesarrollopersonal.png'),
 ('Moda y Estilo', 'modayestilo.png'),
-('Coleccionismo', 'coleccionismo.png');
+('Coleccionismo', 'coleccionismo.png'),
+('Tecnología', 'tecnologia.svg'),
+('Turismo', 'turismo.svg'),
+('Cocina y Gastronomía', 'cocinaygastronomia.svg');
 ```
 
 ### 4.2 Insert de ***Subcategor&iacute;as***
@@ -241,4 +245,72 @@ INSERT INTO subcategorias (IdCategoria, Nombre) VALUES
 (12, 'Monedas'),
 (12, 'Cartas coleccionables'),
 (12, 'Colecciones temáticas');
+```
+
+### 4.2 Insert de ***Eventos***
+
+```sql
+INSERT INTO eventos (Titulo, Descripcion, FechaCreacion, FechaInicio, FechaFin, Creador, Subcategoria, NumParticipantes, Direccion, Localidad, Provincia, ModoEvento, Estado) VALUES
+-- Lectura
+('Club de lectura mensual', 'Lectura compartida de una novela clásica cada mes.', '2025-05-07', '2025-06-01', '2025-08-01', 3, 34, 12, 'Biblioteca Central, Sala 3', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Taller de escritura creativa', 'Explora técnicas narrativas y crea tus propios relatos.', '2025-05-07', '2025-06-05', '2025-07-10', 2, 37, 15, 'Casa de Cultura, Aula 2', 'Plasencia', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+
+-- Teatro y cine
+('Noche de cortometrajes', 'Proyección y debate de cortos independientes.', '2025-05-07', '2025-06-10', '2025-06-10', 3, 42, 30, 'Centro Cultural El Brocense', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Taller de iniciación al teatro', 'Dinámicas para perder el miedo escénico y desarrollar habilidades actorales.', '2025-05-07', '2025-06-15', '2025-07-20', 2, 43, 20, 'Espacio para la Creación Joven', 'Navalmoral de la Mata', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+-- Turismo
+('Ruta por el casco histórico', 'Recorrido guiado por los puntos clave del patrimonio de la ciudad.', '2025-05-07', '2025-06-08', '2025-06-08', 3, 114, 25, 'Plaza Mayor', 'Trujillo', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Visita a exposición contemporánea', 'Análisis colectivo de obras de arte moderno en galería local.', '2025-05-07', '2025-06-12', '2025-06-12', 2, 113, 20, 'Galería Arte XXI', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+-- Música y danza
+('Jam session abierta', 'Ven con tu instrumento o voz a improvisar con otros músicos.', '2025-05-07', '2025-06-20', '2025-06-20', 3, 51, 30, 'Sala Boogaloo', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Taller de bailes latinos', 'Aprende los pasos básicos de salsa, bachata y merengue.', '2025-05-07', '2025-06-18', '2025-07-30', 2, 47, 20, 'Academia Ritmo Tropical', 'Plasencia', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+-- Eventos y ferias
+('Feria medieval local', 'Puestos, representaciones y música ambientada en la Edad Media.', '2025-05-07', '2025-08-01', '2025-08-03', 1, 62, 100, 'Casco Antiguo', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Encuentro cosplay y cultura friki', 'Ven disfrazado de tu personaje favorito y participa en concursos.', '2025-05-07', '2025-07-15', '2025-07-15', 2, 57, 50, 'Palacio de Congresos', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar');
+
+INSERT INTO eventos (Titulo, Descripcion, FechaCreacion, FechaInicio, FechaFin, Creador, Subcategoria, NumParticipantes, Direccion, Localidad, Provincia, ModoEvento, Estado) VALUES
+('Charla de teatro', 'Plan sin presiones para disfrutar juntos de teatro. ¡Te esperamos!', '2025-05-04', '2025-05-04', '2025-05-05', 3, 2, 12, 'Calle Jardín, 32', 'Leganés', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Charla de ciencia', 'Una oportunidad perfecta para compartir nuestra pasión por ciencia. ¡Te esperamos!', '2025-04-26', '2025-04-26', '2025-04-27', 3, 2, 3, 'Avenida del Sol, 50', 'Zaragoza', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Taller de manualidades', 'Plan sin presiones para disfrutar juntos de manualidades. ¡Te esperamos!', '2025-04-24', '2025-04-24', '2025-04-25', 2, 3, 4, 'Avenida del Sol, 94', 'Leganés', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Taller de lectura', 'Acércate y disfruta de una experiencia sobre lectura. ¡Te esperamos!', '2025-05-18', '2025-05-18', '2025-05-19', 3, 3, 1, 'Calle Mayor, 55', 'Mataró', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Evento especial:  tecnología', 'Un encuentro relajado para hablar y explorar tecnología. ¡Te esperamos!', '2025-04-24', '2025-04-24', '2025-04-25', 3, 16, 5, 'Calle Jardín, 74', 'A Coruña', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Iniciación a música en vivo', 'Si te llama la atención el mundo de música en vivo. ¡Te esperamos!', '2025-04-27', '2025-04-27', '2025-04-28', 3, 16, 2, 'Calle Nueva, 24', 'A Coruña', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Iniciación a música en vivo', 'Actividad ideal para quienes se interesan por música en vivo. ¡Te esperamos!', '2025-05-08', '2025-05-08', '2025-05-09', 2, 17, 12, 'Avenida del Sol, 113', 'Utebo', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Conoce más de gastronomía', 'Un encuentro relajado para hablar y explorar gastronomía. ¡Te esperamos!', '2025-05-03', '2025-05-03', '2025-05-04', 2, 17, 4, 'Calle Nueva, 97', 'Plasencia', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Actividad sobre ajedrez', 'Acércate y disfruta de una experiencia sobre ajedrez. ¡Te esperamos!', '2025-04-07', '2025-04-07', '2025-04-08', 2, 27, 6, 'Plaza de España, 85', 'Plasencia', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Descubre tecnología', 'Una oportunidad perfecta para compartir nuestra pasión por tecnología. ¡Te esperamos!', '2025-05-14', '2025-05-14', '2025-05-15', 3, 27, 5, 'Calle Nueva, 16', 'Getafe', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Iniciación a historia', 'Plan sin presiones para disfrutar juntos de historia. ¡Te esperamos!', '2025-05-28', '2025-05-28', '2025-05-29', 3, 28, 9, 'Calle Nueva, 56', 'Getafe', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Explorando gastronomía', 'Plan sin presiones para disfrutar juntos de gastronomía. ¡Te esperamos!', '2025-04-26', '2025-04-26', '2025-04-27', 2, 28, 7, 'Plaza de España, 76', 'Sevilla', 'Sevilla', 'Comunitario', 'Por_Empezar'),
+('Descubre manualidades', 'Nos reuniremos para aprender y disfrutar sobre manualidades. ¡Te esperamos!', '2025-05-27', '2025-05-27', '2025-05-28', 3, 35, 7, 'Avenida del Sol, 53', 'Utebo', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Charla de manualidades', 'Plan sin presiones para disfrutar juntos de manualidades. ¡Te esperamos!', '2025-05-27', '2025-05-27', '2025-05-28', 2, 35, 6, 'Plaza de España, 3', 'Barcelona', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Iniciación a baile', 'Si te llama la atención el mundo de baile. ¡Te esperamos!', '2025-05-17', '2025-05-17', '2025-05-18', 2, 66, 5, 'Calle Mayor, 101', 'A Coruña', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Iniciación a baile', 'Nos reuniremos para aprender y disfrutar sobre baile. ¡Te esperamos!', '2025-04-06', '2025-04-06', '2025-04-07', 2, 66, 3, 'Avenida del Sol, 101', 'Torrent', 'Valencia', 'Comunitario', 'Por_Empezar'),
+('Charla de ciencia', 'Si te llama la atención el mundo de ciencia. ¡Te esperamos!', '2025-05-02', '2025-05-02', '2025-05-03', 3, 70, 9, 'Calle Nueva, 64', 'Cáceres', 'Cáceres', 'Comunitario', 'Por_Empezar'),
+('Iniciación a cine', 'Si te llama la atención el mundo de cine. ¡Te esperamos!', '2025-05-23', '2025-05-23', '2025-05-24', 2, 70, 9, 'Calle Jardín, 26', 'Zaragoza', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Taller de ajedrez', 'Un encuentro relajado para hablar y explorar ajedrez. ¡Te esperamos!', '2025-04-28', '2025-04-28', '2025-04-29', 2, 74, 7, 'Calle Nueva, 109', 'Zaragoza', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Actividad sobre cine', 'Una oportunidad perfecta para compartir nuestra pasión por cine. ¡Te esperamos!', '2025-04-25', '2025-04-25', '2025-04-26', 2, 74, 5, 'Plaza de España, 51', 'Getafe', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Conoce más de gastronomía', 'Una oportunidad perfecta para compartir nuestra pasión por gastronomía. ¡Te esperamos!', '2025-04-09', '2025-04-09', '2025-04-10', 2, 75, 11, 'Calle Mayor, 93', 'Mérida', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Sesión abierta de tecnología', 'Nos reuniremos para aprender y disfrutar sobre tecnología. ¡Te esperamos!', '2025-04-01', '2025-04-01', '2025-04-02', 2, 75, 4, 'Avenida del Sol, 72', 'Leganés', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Charla de ciencia', 'Plan sin presiones para disfrutar juntos de ciencia. ¡Te esperamos!', '2025-04-08', '2025-04-08', '2025-04-09', 3, 81, 12, 'Plaza de España, 39', 'Badajoz', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Descubre senderismo', 'Plan sin presiones para disfrutar juntos de senderismo. ¡Te esperamos!', '2025-05-12', '2025-05-12', '2025-05-13', 2, 81, 11, 'Plaza de España, 21', 'Torrent', 'Valencia', 'Comunitario', 'Por_Empezar'),
+('Explorando fotografía', 'Plan sin presiones para disfrutar juntos de fotografía. ¡Te esperamos!', '2025-05-23', '2025-05-23', '2025-05-24', 3, 84, 1, 'Calle Jardín, 102', 'Mérida', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Sesión abierta de música en vivo', 'Plan sin presiones para disfrutar juntos de música en vivo. ¡Te esperamos!', '2025-04-30', '2025-04-30', '2025-05-01', 3, 84, 6, 'Avenida del Sol, 100', 'Getafe', 'Madrid', 'Comunitario', 'Por_Empezar'),
+('Quedada de manualidades', 'Actividad ideal para quienes se interesan por manualidades. ¡Te esperamos!', '2025-05-12', '2025-05-12', '2025-05-13', 3, 91, 4, 'Calle Jardín, 46', 'A Coruña', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Conoce más de videojuegos', 'Sesión participativa donde profundizaremos en videojuegos. ¡Te esperamos!', '2025-05-23', '2025-05-23', '2025-05-24', 3, 91, 8, 'Plaza de España, 16', 'Motril', 'Granada', 'Comunitario', 'Por_Empezar'),
+('Iniciación a conversación', 'Sesión participativa donde profundizaremos en conversación. ¡Te esperamos!', '2025-04-12', '2025-04-12', '2025-04-13', 2, 96, 10, 'Calle Mayor, 2', 'Ferrol', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Quedada de senderismo', 'Plan sin presiones para disfrutar juntos de senderismo. ¡Te esperamos!', '2025-05-13', '2025-05-13', '2025-05-14', 2, 96, 6, 'Calle Mayor, 19', 'Torrent', 'Valencia', 'Comunitario', 'Por_Empezar'),
+('Conoce más de escritura', 'Un encuentro relajado para hablar y explorar escritura. ¡Te esperamos!', '2025-05-25', '2025-05-25', '2025-05-26', 2, 98, 6, 'Plaza de España, 30', 'Mataró', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Explorando cómics', 'Plan sin presiones para disfrutar juntos de cómics. ¡Te esperamos!', '2025-05-27', '2025-05-27', '2025-05-28', 3, 98, 11, 'Avenida del Sol, 31', 'Dos Hermanas', 'Sevilla', 'Comunitario', 'Por_Empezar'),
+('Charla de cómics', 'Plan sin presiones para disfrutar juntos de cómics. ¡Te esperamos!', '2025-04-29', '2025-04-29', '2025-04-30', 3, 103, 9, 'Avenida del Sol, 88', 'Mérida', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Evento especial:  manualidades', 'Si te llama la atención el mundo de manualidades. ¡Te esperamos!', '2025-04-03', '2025-04-03', '2025-04-04', 3, 103, 9, 'Plaza de España, 49', 'Mataró', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Evento especial:  escritura', 'Sesión participativa donde profundizaremos en escritura. ¡Te esperamos!', '2025-04-30', '2025-04-30', '2025-05-01', 3, 105, 9, 'Calle Jardín, 58', 'Ferrol', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Actividad sobre artesanía', 'Plan sin presiones para disfrutar juntos de artesanía. ¡Te esperamos!', '2025-05-06', '2025-05-06', '2025-05-07', 3, 105, 2, 'Plaza de España, 111', 'Valencia', 'Valencia', 'Comunitario', 'Por_Empezar'),
+('Sesión abierta de ciencia', 'Plan sin presiones para disfrutar juntos de ciencia. ¡Te esperamos!', '2025-04-21', '2025-04-21', '2025-04-22', 2, 108, 11, 'Avenida del Sol, 85', 'Valencia', 'Valencia', 'Comunitario', 'Por_Empezar'),
+('Iniciación a baile', 'Una oportunidad perfecta para compartir nuestra pasión por baile. ¡Te esperamos!', '2025-04-04', '2025-04-04', '2025-04-05', 3, 108, 11, 'Calle Nueva, 36', 'Badajoz', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Conoce más de artesanía', 'Actividad ideal para quienes se interesan por artesanía. ¡Te esperamos!', '2025-05-14', '2025-05-14', '2025-05-15', 2, 117, 5, 'Avenida del Sol, 104', 'Utebo', 'Zaragoza', 'Comunitario', 'Por_Empezar'),
+('Actividad sobre debate', 'Un encuentro relajado para hablar y explorar debate. ¡Te esperamos!', '2025-05-06', '2025-05-06', '2025-05-07', 2, 117, 9, 'Avenida del Sol, 101', 'Ferrol', 'A Coruña', 'Comunitario', 'Por_Empezar'),
+('Charla de viajes', 'Actividad ideal para quienes se interesan por viajes. ¡Te esperamos!', '2025-05-06', '2025-05-06', '2025-05-07', 3, 118, 4, 'Plaza de España, 90', 'Badajoz', 'Badajoz', 'Comunitario', 'Por_Empezar'),
+('Charla de ciencia', 'Plan sin presiones para disfrutar juntos de ciencia. ¡Te esperamos!', '2025-05-06', '2025-05-06', '2025-05-07', 2, 118, 10, 'Calle Jardín, 84', 'Mataró', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Descubre cine', 'Actividad ideal para quienes se interesan por cine. ¡Te esperamos!', '2025-05-19', '2025-05-19', '2025-05-20', 2, 119, 8, 'Avenida del Sol, 5', 'Barcelona', 'Barcelona', 'Comunitario', 'Por_Empezar'),
+('Evento especial:  historia', 'Un encuentro relajado para hablar y explorar historia. ¡Te esperamos!', '2025-05-09', '2025-05-09', '2025-05-10', 2, 119, 9, 'Calle Nueva, 23', 'Mérida', 'Badajoz', 'Comunitario', 'Por_Empezar');
 ```
