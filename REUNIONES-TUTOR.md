@@ -11,6 +11,8 @@ Este documento recoge todo lo tratado en las distintas reuniones mantenidas con 
 ## Índice de Reuniones 🗣️
 
 1. [Reunión 1](#reunión-1)
+2. [Reunión 2](#reunión-2)
+3. [Reunión 3](#reunión-3)
 
 ---
 
@@ -71,8 +73,16 @@ Este documento recoge todo lo tratado en las distintas reuniones mantenidas con 
 
 ## Reunión 3  
 
-🗓️ **Fecha:** *13/05/2025*
+🗓️ **Fecha:** *12/05/2025*
 
 ❓ **Preguntas contempladas para la reuni&oacute;n:**
+
+1. Mostrar al tutor la nueva funcionalidad **extra** de `Estad&iacute;sticas generales de la aplicaci&oacute;n`. 🆕
+2. Comentarle al tutor la idea de separar las estad&iacute;sticas en distintos apartados en vez de en una vista global. 🆕
+3. Mostrarle el **Men&uacute; principal** del usuario ***Colaborador***. 🆕
+4. Revisar las nuevas modificaciones en la base de datos. 🆕
+5. Revisar la vista de `Eventos` cuando pulsas una categor&iacute;a. 🆕
+6. Mostrarle al tutor la vista del link `Sobre nosotros`. 🆕
+7. Consultar con el tutor que debo poner en el apartado `Privacidad`. 🆕
 
 ✅ **Resoluci&oacute;n de dudas:**
