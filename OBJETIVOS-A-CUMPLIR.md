@@ -2,28 +2,32 @@
 
 > [!NOTE]
 > Este documento no es la versi&oacute;n final, por lo tanto, puede estar sujeto a cambios.
+> Los objetivos marcados con ✅ est&aacute;n actualmente completados.
 
-Objetivos a d&iacute;a ***02/05/2025***:
+Objetivos a d&iacute;a ***12/05/2025***:
 
 ## Objetivos principales 🎯
 La aplicaci&oacute;n deber&aacute; cumplir como m&iacute;nimo las siguientes especificaciones:
 
-- **Login de usuario**. ✅
-- **Registro de usuario**. ✅
-- **Modificar usuario (Datos, Password y Avatar)** ✅
-- **Creaci&oacute;n de eventos** por parte del usuario.
-- **Adici&oacute;n de un usuario a un evento**.
-- **Visualizaci&oacute;n de eventos**.
-- **Filtros de b&uacute;squeda** por categor&iacute;as, tiempo, estado de evento, palabra clave.
-- **Dashboard usuario Admin** para gestionar la aplicaci&oacute;n desde dentro: gestionar usuarios, eventos y ver estad&iacute;sticas generales de la aplicaci&oacute;n.
+1. **Login de usuario**. ✅
+2. **Registro de usuario**. ✅
+3. **Modificar usuario (Datos, Password y Avatar)** ✅
+4. **Creaci&oacute;n de eventos** por parte del usuario. ✅
+5. **Visualizaci&oacute;n de eventos creados** por parte del usuario. ✅
+6. **Adici&oacute;n de un usuario a un evento**.
+7. **Visualizaci&oacute;n de categor&iacute;as**. ✅
+8. **Visualizaci&oacute;n de eventos**. ✅
+9. **Filtros de b&uacute;squeda** por categor&iacute;as, tiempo, estado de evento, palabra clave.
+10. **Dashboard usuario Admin** para gestionar la aplicaci&oacute;n desde dentro: gestionar usuarios, eventos.
 
 ---
 
 ## Objetivos adicionales 🎯➕
 Funciones adicionales que realizar&aacute; la aplicaci&oacute;n en caso de disponer del tiempo necesario para implementarlas:
 
-- **Vista de estad&iacute;sticas generales** de la aplicaci&oacute;n con gr&aacute;ficos por parte del usuario Admin.
-- Cuando el usuario haga **Login** se le mostrar&aacute; los eventos filtrados por su **provincia** y ordenados **cronol&oacute;gicamente**.
+1. **Vista de estad&iacute;sticas generales** de la aplicaci&oacute;n con gr&aacute;ficos por parte del usuario Admin. ✅
+2. Cuando el usuario haga **Login** se le mostrar&aacute; los eventos filtrados por su **provincia** y ordenados **cronol&oacute;gicamente**.
+3. Que el usuario ***Administrador*** pueda crear categor&iacute;as y subcategor&iacite;as.
 
 ---
 
