@@ -6,13 +6,16 @@
 
 🏫**Instituto:** *IES Albarregas*
 
-Este documento recoge todo lo tratado en las distintas reuniones mantenidas con el tutor.
+🏫**Clase:** *DAW-2B* 
+
+❗Este documento recoge todo lo tratado en las distintas reuniones mantenidas con el tutor.
 
 ## Índice de Reuniones 🗣️
 
 1. [Reunión 1](#reunión-1)
 2. [Reunión 2](#reunión-2)
 3. [Reunión 3](#reunión-3)
+4. [Reunión 4](#reunión-4)
 
 ---
 
@@ -77,12 +80,27 @@ Este documento recoge todo lo tratado en las distintas reuniones mantenidas con 
 
 ❓ **Preguntas contempladas para la reuni&oacute;n:**
 
-1. Mostrar al tutor la nueva funcionalidad **extra** de `Estad&iacute;sticas generales de la aplicaci&oacute;n`. 🆕
-2. Comentarle al tutor la idea de separar las estad&iacute;sticas en distintos apartados en vez de en una vista global. 🆕
-3. Mostrarle el **Men&uacute; principal** del usuario ***Colaborador***. 🆕
-4. Revisar las nuevas modificaciones en la base de datos. 🆕
-5. Revisar la vista de `Eventos` cuando pulsas una categor&iacute;a. 🆕
-6. Mostrarle al tutor la vista del link `Sobre nosotros`. 🆕
-7. Consultar con el tutor que debo poner en el apartado `Privacidad`. 🆕
+1. Mostrar al tutor la nueva funcionalidad **extra** de `Estad&iacute;sticas generales de la aplicaci&oacute;n`. ✔️
+2. Comentarle al tutor la idea de separar las estad&iacute;sticas en distintos apartados en vez de en una vista global. ❌
+3. Mostrarle el **Men&uacute; principal** del usuario ***Colaborador***. ✔️
+4. Revisar las nuevas modificaciones en la base de datos. ✔️
+5. Revisar la vista de `Eventos` cuando pulsas una categor&iacute;a. ✔️
+6. Mostrarle al tutor la vista del link `Sobre nosotros`. ✔️
+7. Consultar con el tutor que debo poner en el apartado `Privacidad`. ✔️
+
+✅ **Resoluci&oacute;n de dudas:**
+
+1. El tutor me ha recomendado que las estad&iacute;sticas se mantengan en una vista general. ✅
+2. Se ha realizado una revisi&oacute;n de los nuevos campos en la base de datos. ✅
+3. El tutor me ha corregido la vista del enlace `Sobre nosotros` y me ha indicado qu&eacute; informaci&oacute;n debe mostrarse. ✅
+4. El tutor me proporcionar&aacute; la informaci&oacute;n necesaria para completar la vista  `Privacidad`. ✅
+
+---
+
+## Reunión 4  
+
+🗓️ **Fecha:** *13/05/2025*
+
+❓ **Preguntas contempladas para la reuni&oacute;n:**
 
 ✅ **Resoluci&oacute;n de dudas:**
