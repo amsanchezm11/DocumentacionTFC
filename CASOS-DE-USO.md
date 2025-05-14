@@ -1,20 +1,35 @@
-# Casos de uso 
+# Casos de Uso de la Aplicación: *EntreHobbies*
 
-En este documento se recogen los distintos casos de uso de los usuarios de la aplicaci&oacute;n.
-
-A d&iacute;a ***07/04/2025***, queda pendiente la revisi&oacute;n de los casos de uso mostrados a continuaci&oacute;n por el tutor *Francisco Mera Calder&oacute;n*.
+> [!NOTE]
+> Este documento presenta los diferentes casos de uso contemplados para los perfiles de usuario dentro de la aplicaci&oacute;n, detallando sus funcionalidades y responsabilidades principales.
 
 ---
+
 ## Índice
 
-1. [CU - Admin](#cu---admin)
-2. [CU - Organizador](#cu---organizador)
-3. [CU - Colaborador](#cu---colaborador)
+1. [Casos de Uso - Usuario Administrador](#casos-de-uso---usuario-administrador)  
+2. [Casos de Uso - Usuario Colaborador](#casos-de-uso---usuario-colaborador)
 
+---
 
-## CU - Admin
+## Casos de Uso - Usuario Administrador
 
-![CU-Admin](IMG/CASO-DE-USO-ADMIN.png)
+![Diagrama de Casos de Uso del Administrador](IMG/CUADMINISTRADOR.png)
 
-## CU - Organizador
-## CU - Colaborador
+---
+
+## Casos de Uso - Usuario Colaborador
+
+![Diagrama de Casos de Uso del Colaborador](IMG/CUCOLABORADOR.png)
+
+---
+
+🧑‍💻**Alumno:** *Alberto Miguel S&aacute;nchez Mac&iacute;as*
+
+🧑‍🏫**Tutor FCT:** *Francisco Mera Calder&oacute;n*
+
+🏫**Instituto:** *IES Albarregas*
+
+🏫**Clase:** *DAW-2B* 
+
+🔗 **Aplicaci&oacute;n utilizada para la creación de los diagramas:** [Excalidraw](https://excalidraw.com)
