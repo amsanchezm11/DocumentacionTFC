@@ -79,7 +79,7 @@ La tabla de subcategorías define los subtipos que pertenecen a una categor&iacu
 
 ---
 
-### UsuarioEventos 🔗
+### Participantes_Eventos 🔗
 
 Esta tabla intermedia representa la relación **muchos a muchos** entre los usuarios y los eventos a los que se unen.
 
@@ -147,3 +147,8 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 **Modificaci&oacute;n** - ***(11/05/2025)***
 1. Se ha a&ntilde;adido un nuevo campo en la tabla `Usuarios`.
 2. El campo nuevo es `Sexo` y servir&aacute; para controlar la estad&iacute;stica de **Usuarios por Sexo**.
+
+---
+
+**Modificaci&oacute;n** - ***(16/05/2025)***
+1. Se ha modificado el nombre de la tabla intermedia `UsuarioEventos` a `Participantes_Eventos` para mejorar la claridad del modelo de datos, reflejando de manera m&aacute;s precisa la relaci&oacute;n entre los usuarios y los eventos en los que participan.
