@@ -4,7 +4,7 @@
 > Este documento no es la versi&oacute;n final, por lo tanto, puede estar sujeto a cambios.
 > Los objetivos marcados con ✅ est&aacute;n actualmente completados.
 
-Objetivos a d&iacute;a ***12/05/2025***:
+Objetivos a d&iacute;a ***18/05/2025***:
 
 ## Objetivos principales 🎯
 La aplicaci&oacute;n deber&aacute; cumplir como m&iacute;nimo las siguientes especificaciones:
@@ -14,11 +14,12 @@ La aplicaci&oacute;n deber&aacute; cumplir como m&iacute;nimo las siguientes esp
 3. **Modificar usuario (Datos, Password y Avatar)** ✅
 4. **Creaci&oacute;n de eventos** por parte del usuario. ✅
 5. **Visualizaci&oacute;n de eventos creados** por parte del usuario. ✅
-6. **Adici&oacute;n de un usuario a un evento**.
-7. **Visualizaci&oacute;n de categor&iacute;as**. ✅
-8. **Visualizaci&oacute;n de eventos**. ✅
-9. **Filtros de b&uacute;squeda** por categor&iacute;as, tiempo, estado de evento, palabra clave.
-10. **Dashboard usuario Admin** para gestionar la aplicaci&oacute;n desde dentro: gestionar usuarios, eventos.
+6. **Adici&oacute;n de un usuario a un evento**. ✅
+7. **El usuario puede cancelar su evento.** ✅
+8. **Visualizaci&oacute;n de categor&iacute;as**. ✅
+9. **Visualizaci&oacute;n de eventos**. ✅
+10. **Filtros de b&uacute;squeda** por categor&iacute;as, tiempo, estado de evento, palabra clave.
+11. **Dashboard usuario Admin** para gestionar la aplicaci&oacute;n desde dentro: gestionar usuarios, eventos.
 
 ---
 
@@ -39,3 +40,13 @@ Ideas futuras para implementar en la aplicaci&oacute;n:
 - **Sistema de seguimientos entre usuarios**.
 - **Sistema de seguimiento de categor&iacute;as**: el usuario indica qu&eacute; categor&iacute;as le interesan y los eventos que se le muestren cada vez que haga login ser&aacute;n eventos aleatorios de dichas categor&iacute;as.
 - **Usuario organizador**: permitir a peque&ntilde;as asociaciones crear un perfil de usuario con rol de organizador.
+
+---
+
+🧑‍💻**Alumno:** *Alberto Miguel S&aacute;nchez Mac&iacute;as*
+
+🧑‍🏫**Tutor FCT:** *Francisco Mera Calder&oacute;n*
+
+🏫**Instituto:** *IES Albarregas*
+
+🏫**Clase:** *DAW-2B* 
