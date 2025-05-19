@@ -29,6 +29,8 @@ Funciones adicionales que realizar&aacute; la aplicaci&oacute;n en caso de dispo
 1. **Vista de estad&iacute;sticas generales** de la aplicaci&oacute;n con gr&aacute;ficos por parte del usuario Admin. ✅
 2. Cuando el usuario haga **Login** se le mostrar&aacute; los eventos filtrados por su **provincia** y ordenados **cronol&oacute;gicamente**.
 3. Que el usuario ***Administrador*** pueda crear categor&iacute;as y subcategor&iacite;as.
+4. Enviar **correo** cuando un **usuario** se de de **alta**. ✅
+5. Enviar **correo** a los participantes de un **evento** uando es ***Cancelado***. ✅
 
 ---
 
