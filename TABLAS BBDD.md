@@ -1,7 +1,7 @@
 # Tablas de la Base de Datos 🛢️
 
 > [!NOTE]
-> A fecha de ***03 de mayo de 2025***, se han definido las siguientes tablas para la base de datos. Estas tablas están actualmente pendientes de revisión por el tutor **Francisco Mera Calderón**.
+> A fecha de ***29 de mayo de 2025***, se han definido las siguientes tablas para la base de datos. Estas tablas han sido revisadas junto al tutor **Francisco Mera Calderón**.
 
 ## Índice
 
@@ -12,23 +12,24 @@
 
 ### Usuarios 👤
 
-Esta tabla contiene la información básica de los usuarios registrados en la aplicación, como su nombre, apellidos, datos de contacto, y detalles adicionales como su puntuación y rol.
+Esta tabla contiene la información básica de los usuarios registrados en la aplicación, como su nombre, apellidos, datos de contacto, y detalles adicionales como su sexo y rol.
 
-| Campo           | Tipo     | Longitud | Restricciones                                       | Null               |
-|-----------------|----------|----------|-----------------------------------------------------|--------------------|
-| IdUsuario       | INT      | 11       | PK AUTOINCREMENTAL                                  | NOT NULL           |
-| Nombre          | VARCHAR  | 30       |                                                     | NOT NULL           |
-| Apellidos       | VARCHAR  | 40       |                                                     | NULL               |
-| Username        | VARCHAR  | 20       | UNIQUE                                              | NOT NULL           |
-| Email           | VARCHAR  | 60       | UNIQUE                                              | NOT NULL           |
-| Password        | VARCHAR  | 100      |                                                     | NOT NULL           |
-| Telefono        | VARCHAR  | 9        | UNIQUE                                              | NOT NULL           |
-| FechaNacimiento | DATE     |          |                                                     | NOT NULL           |
-| Rol             | VARCHAR  | 11       |                                                     | DEFAULT 'COLABORADOR' |
-| Sexo            | VARCHAR  | 6        |                                                     | NOT NULL           |
-| Localidad       | VARCHAR  | 50       |                                                     | NOT NULL           |
-| Provincia       | VARCHAR  | 50       |                                                     | NOT NULL           |
-| Avatar          | VARCHAR  | 30       |                                                     | DEFAULT 'avatar.png' |
+| Campo           | Tipo    | Longitud | Restricciones                | Null     |
+| --------------- | ------- | -------- | ---------------------------- | -------- |
+| IdUsuario       | INT     | 11       | PK AUTOINCREMENTAL           | NOT NULL |
+| Nombre          | VARCHAR | 30       |                              | NOT NULL |
+| Apellidos       | VARCHAR | 40       |                              | NOT NULL |
+| Username        | VARCHAR | 20       | UNIQUE                       | NOT NULL |
+| Email           | VARCHAR | 60       | UNIQUE                       | NOT NULL |
+| Password        | VARCHAR | 100      |                              | NOT NULL |
+| Telefono        | VARCHAR | 9        | UNIQUE                       | NOT NULL |
+| FechaNacimiento | DATE    |          |                              | NOT NULL |
+| Rol             | VARCHAR | 11       |                              | NOT NULL |
+| Sexo            | VARCHAR | 6        |                              | NOT NULL |
+| Localidad       | VARCHAR | 50       |                              | NOT NULL |
+| IdProvincia     | INT     |          | FK → provincias(IdProvincia) | NOT NULL |
+| FechaCreacion   | DATE    |          |                              | NOT NULL |
+| Avatar          | VARCHAR | 30       | DEFAULT 'avatar.svg'         | NOT NULL |
 
 ---
 
@@ -36,22 +37,33 @@ Esta tabla contiene la información básica de los usuarios registrados en la ap
 
 Esta tabla almacena los eventos creados por los usuarios, incluyendo detalles como las fechas de inicio y fin, la descripción del evento, su estado y el modo (comunitario o competitivo).
 
-| Campo         | Tipo     | Longitud | Restricciones                                                      | Null                |
-|---------------|----------|----------|--------------------------------------------------------------------|---------------------|
-| IdEvento      | INT      |          | PK AUTOINCREMENTAL                                                 | NOT NULL            |
-| Titulo        | VARCHAR  | 40       |                                                                    | NOT NULL            |
-| Descripcion   | VARCHAR  | 255      |                                                                    | NOT NULL            |
-| FechaCreacion | DATE     |          |                                                                    | NOT NULL            |
-| FechaInicio   | DATE     |          |                                                                    | NOT NULL            |
-| FechaFin      | DATE     |          |                                                                    | NOT NULL            |
-| IdUsuario     | INT      | 11       | FK → usuarios(idUsuario)                                           | NOT NULL            |
-| Direccion     | VARCHAR  | 50       |                                                                    | NOT NULL            |
-| Localidad     | VARCHAR  | 50       |                                                                    | NOT NULL            |
-| Provincia     | VARCHAR  | 50       |                                                                    | NOT NULL            |
-| NumParticipantes | INT   |          |                                                                    | NOT NULL            |
-| IdCategoria   | INT      | 6        | FK → categorias(idCategoria)                                       | NOT NULL            |
-| ModoEvento    | VARCHAR  | 11       |                                                                    | DEFAULT 'Comunitario' |
-| Estado        | VARCHAR  | 11       |                                                                    | DEFAULT 'Por Empezar' |
+| Campo            | Tipo    | Longitud | Restricciones                      | Null     |
+| ---------------- | ------- | -------- | ---------------------------------- | -------- |
+| IdEvento         | INT     |          | PK AUTOINCREMENTAL                 | NOT NULL |
+| Titulo           | VARCHAR | 40       |                                    | NOT NULL |
+| Descripcion      | VARCHAR | 255      |                                    | NOT NULL |
+| FechaCreacion    | DATE    |          |                                    | NOT NULL |
+| FechaInicio      | DATE    |          |                                    | NOT NULL |
+| FechaFin         | DATE    |          |                                    | NOT NULL |
+| Creador          | INT     | 11       | FK → usuarios(IdUsuario)           | NOT NULL |
+| Subcategoria     | INT     |          | FK → subcategorias(IdSubcategoria) | NOT NULL |
+| NumParticipantes | INT     |          |                                    | NOT NULL |
+| Direccion        | VARCHAR | 50       |                                    | NOT NULL |
+| Localidad        | VARCHAR | 50       |                                    | NOT NULL |
+| IdProvincia      | INT     |          | FK → provincias(IdProvincia)       | NOT NULL |
+| ModoEvento       | VARCHAR | 11       |                                    | NOT NULL |
+| Estado           | VARCHAR | 11       |                                    | NOT NULL |
+
+---
+
+### Provincias 🌍
+
+Esta tabla contiene las provincias disponibles en el sistema.
+
+| Campo       | Tipo    | Longitud | Restricciones      | Null     |
+| ----------- | ------- | -------- | ------------------ | -------- |
+| IdProvincia | INT     |          | PK AUTOINCREMENTAL | NOT NULL |
+| Nombre      | VARCHAR | 50       | UNIQUE             | NOT NULL |
 
 ---
 
@@ -69,13 +81,13 @@ La tabla de categorías se utiliza para organizar los **eventos** en diferentes 
 
 ### Subcategorías 🗂️
 
-La tabla de subcategorías define los subtipos que pertenecen a una categor&iacute;a. Por ejemplo, dentro de Videojuegos, puedes tener subcategor&iacute;as como eSports, Speedrun, Cooperativo, etc.
+La tabla de subcategorías define los subtipos que pertenecen a una categoría. Por ejemplo, dentro de Videojuegos, puedes tener subcategorías como eSports, Speedrun, Cooperativo, etc.
 
 | Campo          | Tipo    | Longitud | Restricciones                      | Null     |
 | -------------- | ------- | -------- | ---------------------------------- | -------- |
 | IdSubcategoria | INT     |          | PK AUTOINCREMENTAL                 | NOT NULL |
-| IdCategoria    | INT     |          | FK → Categorías(idCategoria)       | NOT NULL |
-| Nombre         | VARCHAR | 40       | UNIQUE CON idCategoria (compuesto) | NOT NULL |
+| IdCategoria    | INT     |          | FK → categorias(IdCategoria)       | NOT NULL |
+| Nombre         | VARCHAR | 40       | UNIQUE CON IdCategoria (compuesto) | NOT NULL |
 
 ---
 
@@ -83,13 +95,13 @@ La tabla de subcategorías define los subtipos que pertenecen a una categor&iacu
 
 Esta tabla intermedia representa la relación **muchos a muchos** entre los usuarios y los eventos a los que se unen.
 
-| Campo      | Tipo     | Longitud | Restricciones              | Null     |
-|------------|----------|----------|----------------------------|----------|
-| IdUsuario  | INT      | 11        | PK, FK → usuarios(idUsuario) | NOT NULL |
-| IdEvento   | INT      |           | PK, FK → eventos(idEvento)   | NOT NULL |
-
+| Campo     | Tipo | Longitud | Restricciones                | Null     |
+| --------- | ---- | -------- | ---------------------------- | -------- |
+| IdUsuario | INT  | 11       | PK, FK → usuarios(IdUsuario) | NOT NULL |
+| IdEvento  | INT  |          | PK, FK → eventos(IdEvento)   | NOT NULL |
 
 ---
+
 ## Modificaciones
 
 **Modificaci&oacute;n** - ***(07/04/2025)***
@@ -152,3 +164,26 @@ Esta tabla intermedia representa la relación **muchos a muchos** entre los usua
 
 **Modificaci&oacute;n** - ***(16/05/2025)***
 1. Se ha modificado el nombre de la tabla intermedia `UsuarioEventos` a `Participantes_Eventos` para mejorar la claridad del modelo de datos, reflejando de manera m&aacute;s precisa la relaci&oacute;n entre los usuarios y los eventos en los que participan.
+
+---
+
+**Modificaci&oacute;n** - ***(29/05/2025)***
+1. Se ha creado una nueva tabla llamada `Provincias`, que contiene un identificador (`IdProvincia`) y el nombre de la provincia. Esta tabla mejora la integridad referencial y evita la duplicación de nombres de provincias en las tablas relacionadas.
+
+2. En la tabla `Usuarios`, se ha reemplazado el campo `Provincia` por el campo `IdProvincia`, el cual actúa como clave foránea referenciada a `Provincias(IdProvincia)`.
+
+3. En la tabla `Eventos`, también se ha sustituido el campo `Provincia` por `IdProvincia`, estableciendo la relación con la nueva tabla `Provincias` a través de una clave foránea.
+
+---
+
+## ℹ️ Informaci&oacute;n del proyecto:
+
+🧑‍💻**Alumno:** *Alberto Miguel S&aacute;nchez Mac&iacute;as*
+
+🌐**Aplicaci&oacute;n:** *EntreHobbies*
+
+🧑‍🏫**Tutor FCT:** *Francisco Mera Calder&oacute;n*
+
+🏫**Instituto:** *IES Albarregas*
+
+🏫**Clase:** *DAW-2B* 
