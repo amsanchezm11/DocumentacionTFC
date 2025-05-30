@@ -14,13 +14,13 @@
 
 ## Casos de Uso - Usuario Administrador
 
-![Diagrama de Casos de Uso del Administrador](IMG/CUADMINISTRADOR.png)
+![Diagrama de Casos de Uso del Administrador](IMG/UMLADMINISTRADOR.png)
 
 ---
 
 ## Casos de Uso - Usuario Colaborador
 
-![Diagrama de Casos de Uso del Colaborador](IMG/CUCOLABORADOR.png)
+![Diagrama de Casos de Uso del Colaborador](IMG/UMLCOLABORADOR.png)
 
 ---
 
