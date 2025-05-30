@@ -32,4 +32,4 @@
 
 🏫**Clase:** *DAW-2B* 
 
-🔗 **Aplicaci&oacute;n utilizada para la creación de los diagramas:** [Excalidraw](https://excalidraw.com)
+🔗 **Aplicaci&oacute;n utilizada para la creación de los diagramas:** [Figma](https://www.figma.com)
