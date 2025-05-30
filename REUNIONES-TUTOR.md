@@ -16,6 +16,7 @@
 2. [Reunión 2](#reunión-2)
 3. [Reunión 3](#reunión-3)
 4. [Reunión 4](#reunión-4)
+5. [Reunión 5](#reunión-5)
 
 ---
 
@@ -85,7 +86,7 @@
 3. Mostrarle el **Men&uacute; principal** del usuario ***Colaborador***. ✔️
 4. Revisar las nuevas modificaciones en la base de datos. ✔️
 5. Revisar la vista de `Eventos` cuando pulsas una categor&iacute;a. ✔️
-6. Mostrarle al tutor la vista del link `Sobre nosotros`. ✔️
+6. Mostrar al tutor la vista del link `Sobre nosotros`. ✔️
 7. Consultar con el tutor que debo poner en el apartado `Privacidad`. ✔️
 
 ✅ **Resoluci&oacute;n de dudas:**
@@ -99,8 +100,34 @@
 
 ## Reunión 4  
 
-🗓️ **Fecha:** *13/05/2025*
+🗓️ **Fecha:** *20/05/2025*
 
 ❓ **Preguntas contempladas para la reuni&oacute;n:**
 
+1. Comentar al tutor que se quiere a&ntilde;adir una nueva tabla `Provincias` a la base de datos para mejor consistencia de datos. ✔️
+2. Mostrar las nuevas funcionalidades de la aplicaci&oacute;n. ✔️
+
 ✅ **Resoluci&oacute;n de dudas:**
+
+1. Se ha dado luz verde para a&ntilde;adir una nueva tabla en la base de datos `Provincias`. ✅
+2. El tutor ha revisado las nuevas funcionalidades de la aplicaci&oacure;n. ✅
+3. El tutor me ha indicado que me planifique estas &uacute;ltimas semanas para ponerme con la parte del Front de la aplicaci&oacute;n y la realizaci&oacute;n de pruebas.
+
+---
+
+## Reunión 5  
+
+🗓️ **Fecha:** *27/05/2025*
+
+❓ **Preguntas contempladas para la reuni&oacute;n:**
+
+1. Mostrar al tutor la versi&oacute;n actual de la aplicaci&oacute;n. ✔️
+2. Mostrar los cambios realizados en la aplicaci&oacute;n en referencia a la adici&oacute;n de la nueva tabla `Provincias`. ✔️
+3. Revisi&oacute;n del Front de la aplicaci&oacute;n. ✔️
+4. Comentar las pruebas que se van a realizar a la aplicaci&oacute;n. ✔️
+
+✅ **Resoluci&oacute;n de dudas:**
+
+1. El tutor ha revisado los cambios realizados. ✅
+2. El tutor ha dado luz verde a la realizaci&oacute;n de las pruebas. ✅
+3. Me ha comentado que pase tambi&eacute;n a realizar los manuales (usuario y t&eacute;cnico). ✅
