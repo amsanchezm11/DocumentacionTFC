@@ -7,20 +7,27 @@
 
 ## Índice
 
-1. [Casos de Uso - Usuario Administrador](#casos-de-uso---usuario-administrador)  
+1. [Casos de Uso - Usuario Anonimo](#casos-de-uso---usuario-anonimo)
 2. [Casos de Uso - Usuario Colaborador](#casos-de-uso---usuario-colaborador)
+3. [Casos de Uso - Usuario Administrador](#casos-de-uso---usuario-administrador)  
 
 ---
 
-## Casos de Uso - Usuario Administrador
+## Casos de Uso - Usuario Anonimo
 
-![Diagrama de Casos de Uso del Administrador](IMG/UMLADMINISTRADOR.png)
+![Diagrama de Casos de Uso del Anónimo](IMG/UMLANONIMO.png)
 
 ---
 
 ## Casos de Uso - Usuario Colaborador
 
 ![Diagrama de Casos de Uso del Colaborador](IMG/UMLCOLABORADOR.png)
+
+---
+
+## Casos de Uso - Usuario Administrador
+
+![Diagrama de Casos de Uso del Administrador](IMG/UMLADMINISTRADOR.png)
 
 ---
 
